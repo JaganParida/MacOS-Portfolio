@@ -9,11 +9,13 @@ body,
 #root {
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 main {
   height: 100%;
   width: 100%;
+  overflow: hidden;
 
   background-image: url(/mac-wallpaper.jpg);
   background-repeat: no-repeat;
