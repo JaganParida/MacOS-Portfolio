@@ -29,7 +29,7 @@ const GitCard = ({
 
       <div className="urls">
         <a href={data.repoLink}>Repository</a>
-        <a href={data.demoLink}>Demo link</a>
+        {data.demoLink && <a href={data.demoLink}>Demo link</a>}
       </div>
     </div>
   );
