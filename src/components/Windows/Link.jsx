@@ -1,6 +1,6 @@
 import React from "react";
 import MacWindow from "./MacWindow";
-import { Github, Linkedin, Mail, Globe, Twitter } from "lucide-react"; 
+import { Github, Linkedin, Mail, Globe, Twitter } from "lucide-react";
 import "./link.scss";
 
 const Link = ({
@@ -57,11 +57,7 @@ const Link = ({
     >
       <div className="link-window">
         <div className="profile-header">
-          <img
-            src="https://github.com/jaganparida.png" 
-            alt="Profile"
-            className="avatar"
-          />
+          <img src="./Jagan.jpeg" alt="Profile" className="avatar" />
           <h3>Jagan Parida</h3>
           <p>Full-Stack Developer | Open Source</p>
         </div>
