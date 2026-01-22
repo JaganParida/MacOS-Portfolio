@@ -1,0 +1,26 @@
+.resume-window {
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff; 
+  overflow: hidden;
+  border-bottom-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+
+  iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+    display: block;
+
+    animation: fade-in 0.5s ease;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

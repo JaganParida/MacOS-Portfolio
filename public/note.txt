@@ -1,7 +1,7 @@
 /**
  * @file: profile.config.ts
- * @author: Engineering Portfolio
- * @summary: A high-performance full-stack engineer.
+ * @author: Jagan Parida
+ * @summary: Full-Stack Developer & Open Source Contributor.
  */
 
 // --------------------------------------------------
@@ -10,18 +10,20 @@
 
 const TECH_STACK = {
   frontend: [
-    "React.js",    // 100%
     "Next.js",     // 95%
+    "React.js",    // 90%
+    "Angular",     // 80%
+    "GSAP",        // 85%
     "TailwindCSS", // 90%
-    "Three.js",    // 70%
   ],
   backend: [
-    "Node.js",     // 90%
-    "PostgreSQL",  // 85%
-    "Redis",       // 75%
-    "Docker",      // 80%
+    "Node.js",     // 85%
+    "Spring Boot", // 80%
+    "MongoDB",     // 85%
+    "Express.js",  // 85%
   ],
-  tools: ["AWS", "Git", "Figma", "Linux"]
+  problem_solving: ["Java", "DSA", "LeetCode"],
+  tools: ["Git", "Docker", "Figma", "Postman"]
 };
 
 // --------------------------------------------------
@@ -30,31 +32,28 @@ const TECH_STACK = {
 
 class ProfessionalHistory {
   
-  /** * CURRENT ROLE
-   * @period 2023 - Present 
+  /** * CURRENT FOCUS
+   * @period 2025 - 2026 
    */
-  public async TechFlow_Systems(): Promise<Impact> {
-    const role = "Senior Full-Stack Engineer";
+  public async OpenSource_Contributions(): Promise<Impact> {
+    const roles = ["OSCG'26 Contributor", "SWOC S6 Contributor"];
     
     // Key Achievements
-    const optimized = await api.optimize({ strategy: "Redis Caching" });
-    const latencyReduction = "40%";
+    const activity = await github.getContributions(); // 750+ Contributions
+    const focus = "Contributing to global open-source ecosystems";
     
-    const leadership = this.mentor(["Jr. Dev 1", "Jr. Dev 2", "Jr. Dev 3"]);
-    const architecture = "Monolith -> Microservices Migration";
-    
-    return { role, optimized, architecture, leadership };
+    return { roles, activity, focus };
   }
 
-  /** * PREVIOUS ROLE
-   * @period 2021 - 2023
+  /** * PREVIOUS INTERNSHIP
+   * @period Dec 2025
    */
-  public PixelPerfect_Studios(): void {
-    this.role = "Frontend Developer";
-    this.focus = "High-Fidelity Animations";
+  public OasisInfobyte_Internship(): void {
+    this.role = "Web Development & Design Intern";
+    this.focus = "Building responsive and interactive web interfaces";
     
-    // Implemented GSAP scroll-triggers for 15+ clients
-    // Improved Lighthouse Performance Scores: 65 -> 98
+    // Delivered high-quality frontend components
+    // Integrated modern design principles with core web tech
   }
 }
 
@@ -62,23 +61,22 @@ class ProfessionalHistory {
 // 3. COMPETITIVE ACHIEVEMENTS
 // --------------------------------------------------
 
-interface HackathonWin {
-  rank: number;
+interface Milestone {
+  status: string;
   event: string;
   project: string;
 }
 
-const trophyCabinet: HackathonWin[] = [
+const trophyCabinet: Milestone[] = [
   {
-    rank: 1,
-    event: "Global AI Hackathon 2024",
-    project: "EcoVision (Computer Vision Waste Segregation)",
-    // Prize: $5,000
+    status: "Shortlisted",
+    event: "Google Cloud Gen AI Exchange Hackathon 2025",
+    project: "Personalized Career and Skills Advisor",
   },
   {
-    rank: 500, // Top 500 Global
-    event: "Google Code Jam 2023",
-    project: "Algorithm Optimization (Dynamic Programming)",
+    status: "In Progress",
+    event: "365-Day LeetCode Streak",
+    project: "800+ Problems Solved Goal",
   }
 ];
 
@@ -87,19 +85,18 @@ const trophyCabinet: HackathonWin[] = [
 // --------------------------------------------------
 
 const education = new Map<string, string>([
-  ["Stanford University", "MS Computer Science (3.9 GPA)"],
-  ["MIT World Peace Univ", "B.Tech Information Tech (8.8 CGPA)"]
+  ["Centurion University", "B.Tech Computer Science & Engineering ('2027)"]
 ]);
 
 export default new ProfessionalHistory();
-
+```
 
 ```bash
 # TERMINAL OUTPUT
 # ---------------------------------------
 $ user --status
-> Status: Open to Opportunities
-> Location: Global / Remote
+> Status: Building Attendance Management Systems & Exploring GenAI
+> Location: Odisha, India
 > Loading Assets... [||||||||||] 100%
 > Ready.
 ```
