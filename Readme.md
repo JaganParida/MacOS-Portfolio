@@ -1,81 +1,86 @@
-````md
-#  macOS Portfolio
+#  Jagan Parida | macOS Portfolio
+
+<div align="center">
 
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)](https://sass-lang.com/)
 [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 
-> **Think different.**  
-> A fully interactive web-based portfolio that reimagines the personal website as a functional macOS desktop environment.
+<h3>
+  <a href="https://jagan-portfolio-cyan.vercel.app/"> Launch Live System</a>
+  <span> | </span>
+  <a href="https://github.com/JaganParida/MacOS-Portfolio/issues">🐛 Report Bug</a>
+</h3>
+
+<p><i>"Designing the future, one pixel at a time."</i></p>
+
+</div>
 
 ---
 
-## 🔴 Live Demo
+## ⚡️ Overview
 
-👉 **[Launch System](https://your-portfolio-link.vercel.app)**  
-_(Replace the link above with your actual Vercel deployment URL)_
+Welcome to **Jagan Parida's Portfolio**.
 
-![Desktop Preview](https://github.com/user-attachments/assets/placeholder-image)  
-_(Tip: Capture a screenshot of your portfolio desktop and paste the URL here)_
+Instead of a traditional static resume, I built a **fully functional web-based operating system**. This project showcases my skills in **Full-Stack Development**, **UI/UX Design**, and **Complex State Management** by mimicking the macOS ecosystem right in the browser.
+
+> **Why this?** It demonstrates not just _what_ I can build, but _how_ I obsess over details—from the physics of the dock animations to the z-index window layering.
 
 ---
 
-## ✨ System Architecture
+## 💎 System Architecture
 
-This project isn't just a website; it's a simulated operating system built on the web.
+### 🖥️ The Desktop
 
-### 🖥️ Desktop Environment
-
-- **Dynamic Wallpaper:** Immersive backgrounds that set the tone.
-- **Menu Bar:** A functional top navigation bar with system status indicators.
-- **Draggable Windows:** A custom window manager allowing you to drag, focus, and layer applications just like a real OS.
+- **Dynamic Environment:** A highly optimized desktop interface that manages window states, active applications, and system time.
+- **Window Manager:** A custom-built engine that handles dragging, resizing, minimizing, and maximizing windows with persistence.
 
 ### 🚀 The Dock
 
-- **Physics-Based Animations:** Icons bounce when launching apps.
-- **Active Indicators:** Visual cues (dots) show which applications are currently running.
+- **Interactive Physics:** Icons scale and bounce based on mouse proximity and click events.
+- **State Awareness:** Visual indicators show which apps are open, minimized, or active.
 
-### 📂 Built-in Applications
+### 📂 Application Suite
 
-| App                | Description                                                               |
-| ------------------ | ------------------------------------------------------------------------- |
-| **Terminal (CLI)** | Navigate the portfolio using command-line instructions                    |
-| **GitHub**         | Fetches live data including pinned repositories and contribution heatmaps |
-| **Spotify**        | An embedded music player                                                  |
-| **Mail**           | A custom email client that integrates directly with Gmail                 |
-| **Notes**          | A markdown-enabled notepad with syntax highlighting                       |
-| **Calendar**       | A functional monthly view with date navigation                            |
-
----
-
-## 🛠️ Tech Stack
-
-- **Core:** React.js (v18+), Vite
-- **Styling:** SCSS (Sass)
-- **Icons:** Lucide React
-- **Animation & Drag:** framer-motion, react-draggable
-- **Utilities:** react-syntax-highlighter
-- **Deployment:** Vercel
+| Icon | App          | My Implementation                                                                                   |
+| :--: | :----------- | :-------------------------------------------------------------------------------------------------- |
+|  🧑‍💻  | **Terminal** | A functional CLI that allows users to navigate my skills and bio using commands like `ls` and `cd`. |
+|  🐙  | **GitHub**   | Fetches my live contribution data and pinned repositories using the GitHub API.                     |
+|  🎵  | **Spotify**  | An embedded player connected to my personal "Coding Mode" playlist.                                 |
+|  📧  | **Mail**     | A fully working email client. **Clicking Send actually opens your Gmail** to email me directly!     |
+|  🔗  | **Links**    | A custom "Linktree" style window organizing my social presence.                                     |
+|  📅  | **Calendar** | A custom-built calendar logic to handle date navigation and real-time updates.                      |
 
 ---
 
-## 🚀 Getting Started
+## 🛠️ Technical Specifications
+
+- **Core Framework:** `React.js` (v18)
+- **Build Tool:** `Vite` (Lightning fast HMR)
+- **Styling:** `SCSS` (Custom modules, no UI libraries used for core layout)
+- **Icons:** `Lucide React`
+- **Animation:** `Framer Motion`
+- **Deployment:** `Vercel`
+
+---
+
+## 🔋 Getting Started
+
+Want to see how I built this? Follow these steps to run my code locally.
 
 ### Prerequisites
 
-- Node.js (v16 or higher)
-- npm or yarn
+- **Node.js** (v16+)
+- **npm**
 
 ### Installation
 
-```bash
-git clone https://github.com/your-username/macos-portfolio.git
-cd macos-portfolio
-npm install
-npm run dev
-```
-````
+1. **Clone my repository**
+   ```bash
+   git clone [https://github.com/JaganParida/MacOS-Portfolio.git](https://github.com/JaganParida/MacOS-Portfolio.git)
+   cd MacOS-Portfolio
+   ```
 
 Open your browser and visit:
 `http://localhost:5173`
@@ -129,4 +134,3 @@ src/
   <p>If you enjoyed this project, please give it a ⭐️</p>
   <p>Designed & Built with ❤️ by Jagan</p>
 </div>
-```
