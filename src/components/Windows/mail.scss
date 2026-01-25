@@ -2,158 +2,252 @@
   display: flex;
   height: 100%;
   width: 100%;
-  background-color: #1e1e1e;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  border-bottom-left-radius: 0.75rem;
-  border-bottom-right-radius: 0.75rem;
+  background-color: #202124; // Google Dark Grey
+  font-family:
+    "Roboto",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  color: #e8eaed;
   overflow: hidden;
 
+  // --- SIDEBAR ---
   .mail-sidebar {
-    width: 180px;
-    background-color: rgba(40, 40, 40, 0.95);
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 2.5rem; 
+    width: 200px;
+    padding-top: 1rem;
+    background-color: #202124; // Seamless sidebar
     display: flex;
     flex-direction: column;
-    color: #b0b0b0;
-    font-size: 0.9rem;
 
-    .sidebar-header {
-      padding: 0 1rem 0.5rem;
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: #666;
-      text-transform: uppercase;
+    .compose-btn-container {
+      padding: 0 1rem 1rem 1rem;
+
+      .gmail-compose-btn {
+        background-color: #c2e7ff; // Gmail Light Blue
+        color: #001d35;
+        border: none;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 20px;
+        border-radius: 16px; // Pill shape
+        font-weight: 600;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: box-shadow 0.2s;
+        min-width: 140px;
+
+        &:hover {
+          box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.3);
+          background-color: #b3d7ef;
+        }
+      }
     }
 
-    .sidebar-item {
-      padding: 0.5rem 1rem;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      transition: background 0.2s;
+    .sidebar-nav {
+      flex: 1;
+      .sidebar-item {
+        padding: 8px 1rem 8px 2rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        margin-right: 8px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #9aa0a6;
 
-      &:hover {
-        background-color: rgba(255, 255, 255, 0.05);
-      }
+        &:hover {
+          background-color: rgba(232, 234, 237, 0.08);
+          color: #e8eaed;
+        }
 
-      &.active {
-        background-color: #007aff;
-        color: white;
-      }
-
-      .count {
-        color: rgba(255, 255, 255, 0.5);
         &.active {
-          color: rgba(255, 255, 255, 0.8);
+          background-color: rgba(138, 180, 248, 0.2); // Active Blue tint
+          color: #8ab4f8; // Google Blue
+          font-weight: 700;
+        }
+
+        .count {
+          font-size: 0.75rem;
+          color: inherit;
         }
       }
     }
   }
 
-  .mail-compose {
+  // --- MAIN AREA ---
+  .mail-main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    background-color: #262626;
+    background-color: #1a1a1a; // Slightly darker for contrast
+    border-top-left-radius: 12px;
+    margin: 8px 8px 8px 0;
+    overflow: hidden;
+    position: relative;
 
-    .compose-header {
-      padding: 2.5rem 1.5rem 0.5rem; 
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    // Fake Search Bar
+    .top-bar {
+      height: 48px;
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+      background-color: #202124;
 
-      .header-row {
+      .search-box {
+        background-color: #303134;
+        flex: 1;
+        max-width: 400px;
+        height: 36px;
+        border-radius: 8px;
         display: flex;
         align-items: center;
-        padding: 0.4rem 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 0 10px;
+        color: #9aa0a6;
+        font-size: 0.9rem;
+        gap: 10px;
 
-        &:last-child {
-          border-bottom: none;
+        .menu-icon {
+          cursor: pointer;
+        }
+      }
+    }
+
+    // Compose Area
+    .mail-compose-container {
+      flex: 1;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+
+      .compose-card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 0 1.5rem;
+
+        .compose-header {
+          padding: 1rem 0 0.5rem;
+          h3 {
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin: 0;
+            padding-bottom: 0.5rem;
+          }
         }
 
-        .label {
-          width: 60px;
-          color: #888;
-          font-size: 0.9rem;
-          text-align: right;
-          margin-right: 1rem;
+        // Material Input Style (Bottom Border)
+        .input-group {
+          display: flex;
+          align-items: center;
+          min-height: 40px;
+          border-bottom: 1px solid #5f6368;
+          position: relative;
+          transition: border-bottom 0.2s;
+
+          &:focus-within {
+            border-bottom: 2px solid #8ab4f8; // Focus Blue
+          }
+
+          .label {
+            color: #9aa0a6;
+            width: 40px;
+            font-size: 0.9rem;
+          }
+
+          .recipient-chip {
+            border: 1px solid #5f6368;
+            border-radius: 16px;
+            padding: 2px 10px;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            color: #e8eaed;
+          }
+
+          input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: #e8eaed;
+            font-size: 0.95rem;
+            padding: 8px 0;
+            outline: none;
+
+            &::placeholder {
+              color: #9aa0a6;
+            }
+          }
         }
 
-        .recipient-pill {
-          background-color: #007aff;
-          color: white;
-          padding: 2px 8px;
-          border-radius: 4px;
-          font-size: 0.85rem;
-        }
-
-        input {
+        .message-body {
+          flex: 1;
+          margin-top: 1rem;
           background: transparent;
           border: none;
-          color: white;
-          font-size: 0.95rem;
-          flex: 1;
+          color: #e8eaed;
+          font-family: inherit;
+          font-size: 1rem;
+          line-height: 1.5;
+          resize: none;
           outline: none;
 
           &::placeholder {
-            color: #555;
+            color: #5f6368;
           }
         }
-      }
-    }
 
-    .message-body {
-      flex: 1;
-      background: transparent;
-      border: none;
-      color: #e0e0e0;
-      padding: 1.5rem;
-      font-size: 1rem;
-      line-height: 1.5;
-      resize: none;
-      outline: none;
-      font-family: inherit;
+        .compose-footer {
+          height: 60px;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
 
-      &::placeholder {
-        color: #555;
-      }
-    }
+          .send-btn {
+            background-color: #8ab4f8; // Google Blue
+            color: #202124; // Dark text on blue btn
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 18px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: all 0.2s;
 
-    .compose-footer {
-      padding: 1rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+            &:hover {
+              background-color: #aecbfa;
+              box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            }
 
-      .attach-btn {
-        background: transparent;
-        border: none;
-        color: #888;
-        cursor: pointer;
-        &:hover {
-          color: #ccc;
-        }
-      }
+            &:disabled {
+              background-color: #3c4043;
+              color: #70757a;
+              cursor: not-allowed;
+              filter: blur(0.5px);
+            }
+          }
 
-      .send-btn {
-        background: transparent;
-        border: none;
-        color: #007aff;
-        font-weight: 600;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        transition: opacity 0.2s;
+          .attach-btn {
+            background: transparent;
+            border: none;
+            color: #9aa0a6;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-        &:hover {
-          opacity: 0.8;
-        }
-
-        &.sending {
-          color: #888;
-          cursor: wait;
+            &:hover {
+              background-color: rgba(255, 255, 255, 0.05);
+              color: #e8eaed;
+            }
+          }
         }
       }
     }
