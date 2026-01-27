@@ -120,16 +120,6 @@ src/
 
 ---
 
-## 🤝 Contributing
-
-1. Fork the project
-2. Create your branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add AmazingFeature'`)
-4. Push (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
 <div align="center">
   <p>If you enjoyed this project, please give it a ⭐️</p>
   <p>Designed & Built with ❤️ by Jagan</p>
