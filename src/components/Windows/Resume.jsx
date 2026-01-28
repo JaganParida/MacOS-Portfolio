@@ -16,12 +16,12 @@ const Resume = ({
       setwindowState={setwindowState}
       activeWindow={activeWindow}
       setActiveWindow={setActiveWindow}
-      width="50vw" 
-      height="80vh" 
+      width="50vw"
+      height="80vh"
     >
       <div className="resume-window">
         <iframe
-          src="/Resume.pdf#toolbar=0"
+          src="/Jagan_Parida_Resume.pdf#toolbar=0"
           frameBorder="0"
           title="Resume PDF"
         ></iframe>
