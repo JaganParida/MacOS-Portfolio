@@ -1,5 +1,10 @@
 .mobile-warning-overlay {
-  background-color: rgba(0, 0, 0, 0.636);
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.4
+  ); 
   position: absolute;
   width: 100%;
   height: 100%;
@@ -11,39 +16,51 @@
   font-family:
     system-ui,
     -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    "Open Sans",
-    "Helvetica Neue",
     sans-serif;
-  padding: 4rem;
-  backdrop-filter: blur(10px);
-  color: rgba(181, 180, 179, 0.838);
+  padding: 2rem;
+  backdrop-filter: blur(20px); 
+  color: rgba(255, 255, 255, 0.8);
 
   .warning-content {
+    position: relative;
     text-align: center;
-    border: 1px solid grey;
-    background-color: rgba(80, 79, 79, 0.196);
-    padding: 15px 20px;
-    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    background-color: rgba(30, 30, 30, 0.7); 
+    padding: 40px 30px 30px; 
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    max-width: 90%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #ff5f56; 
+      box-shadow:
+        20px 0 0 0 #ffbd2e,
+        40px 0 0 0 #27c93f; 
+    }
 
     h1 {
-      font-size: 1.8rem;
-      font-weight: 500;
-      background: linear-gradient(125deg, rgb(239, 239, 239), rgb(81, 81, 81));
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-top: 10px;
+      background: linear-gradient(180deg, #fff 0%, #aaa 100%);
+      -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
 
     p {
-      font-size: 1.2rem;
-      color: rgb(185, 184, 184);
-      font-weight: 400;
-      margin-top: 8px;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.6);
+      margin-top: 12px;
     }
   }
 }
