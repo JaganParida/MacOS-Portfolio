@@ -7,3 +7,12 @@
     width: 100%;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .cli-window {
+    div[name="react-console-emulator"] {
+      font-size: 12px !important;
+      padding: 10px !important;
+    }
+  }
+}
