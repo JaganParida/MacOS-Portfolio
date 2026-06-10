@@ -10,6 +10,14 @@ import Cli from "./components/Windows/Cli";
 import Calendar from "./components/Windows/Calendar";
 import Link from "./components/Windows/Link";
 import Mail from "./components/Windows/Mail";
+import ContextMenu from "./components/ContextMenu";
+
+const wallpapers = [
+  "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=2564&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2564&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=2564&auto=format&fit=crop"
+];
 
 const App = () => {
   const [windowState, setwindowState] = useState({
@@ -24,9 +32,35 @@ const App = () => {
   });
 
   const [activeWindow, setActiveWindow] = useState("");
+  const [wallpaperIndex, setWallpaperIndex] = useState(0);
+  const [contextMenu, setContextMenu] = useState({ show: false, x: 0, y: 0 });
+
+  const handleContextMenu = (e) => {
+    e.preventDefault();
+    setContextMenu({ show: true, x: e.pageX, y: e.pageY });
+  };
+
+  const nextWallpaper = () => {
+    setWallpaperIndex((prev) => (prev + 1) % wallpapers.length);
+  };
+
+  const handleRefresh = () => {
+    window.location.reload();
+  };
 
   return (
-    <main>
+    <main 
+      onContextMenu={handleContextMenu}
+      style={{ backgroundImage: `url(${wallpapers[wallpaperIndex]})` }}
+    >
+      <ContextMenu 
+        show={contextMenu.show} 
+        x={contextMenu.x} 
+        y={contextMenu.y} 
+        onClose={() => setContextMenu({ ...contextMenu, show: false })}
+        onNextWallpaper={nextWallpaper}
+        onRefresh={handleRefresh}
+      />
       <Nav />
       <Dock
         windowState={windowState}
