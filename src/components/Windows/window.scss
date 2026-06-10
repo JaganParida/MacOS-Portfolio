@@ -7,8 +7,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 75px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.2);
 
   &.window-open-anim {
     animation: mac-window-open 0.5s cubic-bezier(0.25, 1.2, 0.4, 1);
@@ -43,9 +43,10 @@
         cursor: pointer;
 
         .icon {
-          color: rgba(0, 0, 0, 0.6);
+          color: rgba(0, 0, 0, 0.65);
           opacity: 0;
           transition: opacity 0.15s ease;
+          position: absolute;
         }
       }
       &:hover .icon {

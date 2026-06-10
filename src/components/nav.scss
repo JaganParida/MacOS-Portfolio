@@ -7,10 +7,10 @@ nav {
   z-index: 9999; 
 
   padding-inline: 1rem;
-  color: rgba(227, 227, 227, 0.9);
-  background-color: #1f1f1f72; 
-  backdrop-filter: blur(15px) saturate(120%); 
-  -webkit-backdrop-filter: blur(15px) saturate(120%);
+  color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(40, 40, 40, 0.4); 
+  backdrop-filter: blur(40px) saturate(180%); 
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
 
   display: flex;
   justify-content: space-between;
@@ -18,11 +18,11 @@ nav {
   user-select: none; 
 
   font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
     sans-serif;
   font-size: 0.85rem;
-  font-weight: 400;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); 
+  font-weight: 500;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); 
 
   .left,
   .right {
@@ -33,16 +33,16 @@ nav {
   }
 
   .nav-item {
-    padding: 0.2rem 0.6rem;
+    padding: 0.15rem 0.6rem;
     border-radius: 4px;
     cursor: default;
-    transition: background-color 0.2s;
-    height: 85%;
+    transition: background-color 0.1s;
+    height: 80%;
     display: flex;
     align-items: center;
 
     &:hover {
-      background-color: rgba(255, 255, 255, 0.1);
+      background-color: rgba(255, 255, 255, 0.15);
     }
 
     p {
@@ -63,7 +63,8 @@ nav {
 
 
   .app-name {
-    font-weight: 700;
+    font-weight: 600;
+    color: white;
   }
 
   .nav-icon {
