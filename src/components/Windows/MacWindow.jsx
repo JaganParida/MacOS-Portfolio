@@ -15,6 +15,13 @@ const MacWindow = ({
 }) => {
   const [isMaximized, setIsMaximized] = useState(false);
   const [isOpening, setIsOpening] = useState(true);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => setIsOpening(false), 500);
@@ -33,13 +40,15 @@ const MacWindow = ({
     setIsMaximized(!isMaximized);
   };
 
+  const effectiveMaximized = isMaximized || isMobile;
+
   return (
     <Rnd
-      size={isMaximized ? { width: "100vw", height: "94vh" } : undefined}
-      position={isMaximized ? { x: 0, y: 30 } : undefined}
-      disableDragging={isMaximized}
-      enableResizing={!isMaximized}
-      default={{ x: 300, y: 200, width: width, height: height }}
+      size={effectiveMaximized ? { width: "100vw", height: isMobile ? "calc(100vh - 40px)" : "94vh" } : undefined}
+      position={effectiveMaximized ? { x: 0, y: 32 } : undefined}
+      disableDragging={effectiveMaximized}
+      enableResizing={!effectiveMaximized}
+      default={{ x: 300, y: 100, width: width, height: height }}
       minWidth={300}
       minHeight={200}
       bounds="window"
@@ -51,7 +60,7 @@ const MacWindow = ({
     >
       <div
         className={`window 
-        ${isMaximized ? "maximized" : ""} 
+        ${effectiveMaximized ? "maximized" : ""} 
         ${isOpening ? "window-open-anim" : ""}
       `}
       >
