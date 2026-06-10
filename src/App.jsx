@@ -13,11 +13,10 @@ import Mail from "./components/Windows/Mail";
 import ContextMenu from "./components/ContextMenu";
 
 const wallpapers = [
-  "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2070&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=2070&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1604871000636-074fa5117945?q=80&w=2070&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1550684376-efcbd6e3f031?q=80&w=2070&auto=format&fit=crop"
+  "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=2564&auto=format&fit=crop", // Smooth dark metallic/grey abstract
+  "https://images.unsplash.com/photo-1604871000636-074fa5117945?q=80&w=2564&auto=format&fit=crop", // Dark grey smooth 3d shapes
+  "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?q=80&w=2564&auto=format&fit=crop", // Premium smooth dark grey gradient
+  "https://images.unsplash.com/photo-1508615039623-a25605d2b022?q=80&w=2564&auto=format&fit=crop"  // Minimalist dark grey tone
 ];
 
 const App = () => {
