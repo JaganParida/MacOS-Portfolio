@@ -13,11 +13,11 @@ import Mail from "./components/Windows/Mail";
 import ContextMenu from "./components/ContextMenu";
 
 const wallpapers = [
-  "https://images.unsplash.com/photo-1695246733237-7ce853b0c534?q=80&w=2564&auto=format&fit=crop", // Sonoma aesthetic
-  "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop", // Fluid dark
-  "https://images.unsplash.com/photo-1604871000636-074fa5117945?q=80&w=2564&auto=format&fit=crop", // Abstract dark
-  "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=2564&auto=format&fit=crop", // M4 purple aesthetic
-  "https://images.unsplash.com/photo-1614850523459-c2f4c699c52e?q=80&w=2564&auto=format&fit=crop"  // 3D shapes
+  "https://raw.githubusercontent.com/vinceliuice/WhiteSur-wallpapers/master/4k/Monterey-dark.jpg", // Monterey Dark
+  "https://raw.githubusercontent.com/vinceliuice/WhiteSur-wallpapers/master/4k/BigSur-dark.jpg", // BigSur Dark
+  "https://raw.githubusercontent.com/vinceliuice/WhiteSur-wallpapers/master/4k/Catalina-dark.jpg", // Catalina Dark
+  "https://raw.githubusercontent.com/vinceliuice/WhiteSur-wallpapers/master/4k/Mojave-dark.jpg", // Mojave Dark
+  "https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2564&auto=format&fit=crop" // Liquid Dark
 ];
 
 const App = () => {
