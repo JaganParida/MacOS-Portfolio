@@ -1,7 +1,7 @@
 import React from "react";
 import "./nav.scss";
 import DateTime from "./DateTime";
-import { BatteryMedium, Search, Wifi } from "lucide-react";
+import { BatteryMedium, Search, Wifi, SlidersHorizontal } from "lucide-react";
 
 const Nav = () => {
   return (
@@ -46,6 +46,9 @@ const Nav = () => {
         </div>
         <div className="nav-icon">
           <Search size={16} />
+        </div>
+        <div className="nav-icon" style={{ marginLeft: "4px", marginRight: "4px" }}>
+          <SlidersHorizontal size={16} />
         </div>
 
         <div className="nav-item date-time">

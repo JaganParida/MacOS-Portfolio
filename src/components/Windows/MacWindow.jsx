@@ -15,6 +15,7 @@ const MacWindow = ({
 }) => {
   const [isMaximized, setIsMaximized] = useState(false);
   const [isOpening, setIsOpening] = useState(true);
+  const [isClosingWindow, setIsClosingWindow] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -32,7 +33,10 @@ const MacWindow = ({
 
   const handleMinimizeOrClose = (e) => {
     e.stopPropagation();
-    setwindowState((prev) => ({ ...prev, [windowName]: false }));
+    setIsClosingWindow(true);
+    setTimeout(() => {
+      setwindowState((prev) => ({ ...prev, [windowName]: false }));
+    }, 250);
   };
 
   const handleMaximize = (e) => {
@@ -62,6 +66,7 @@ const MacWindow = ({
         className={`window 
         ${effectiveMaximized ? "maximized" : ""} 
         ${isOpening ? "window-open-anim" : ""}
+        ${isClosingWindow ? "window-close-anim" : ""}
       `}
       >
         <div className="nav">
