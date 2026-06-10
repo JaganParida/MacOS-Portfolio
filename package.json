@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "lucide-react": "^0.562.0",
+    "puppeteer": "^25.1.0",
     "react": "^19.2.0",
     "react-console-emulator": "^5.0.2",
     "react-dom": "^19.2.0",
