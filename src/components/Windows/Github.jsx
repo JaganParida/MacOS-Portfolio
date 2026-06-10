@@ -64,6 +64,8 @@ const Github = ({
       setwindowState={setwindowState}
       activeWindow={activeWindow}
       setActiveWindow={setActiveWindow}
+      width="70vw"
+      height="85vh"
     >
       <div className="bento-main-container">
         <div className="bento-header">
