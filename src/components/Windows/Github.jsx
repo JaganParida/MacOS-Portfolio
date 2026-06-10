@@ -89,18 +89,24 @@ const Github = ({
     >
       <div className="gh-main-container">
         <div className="gh-contributions-section">
-          <h3
-            style={{ marginBottom: "1rem", color: "#c9d1d9", fontSize: "1rem" }}
-          >
-            Contributions
-          </h3>
-          <div className="gh-heatmap-card">
-            <img
-              src={heatmapUrl}
-              alt="GitHub Heatmap"
-              className="gh-heatmap-img"
-              style={{ width: "100%", height: "auto" }}
-            />
+          <div className="gh-section-header">
+            <h3>Developer Activity</h3>
+          </div>
+          <div className="gh-dashboard-grid">
+            <div className="gh-dashboard-card">
+              <img
+                src={`https://github-readme-stats.vercel.app/api?username=${username}&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000`}
+                alt="GitHub Stats"
+                className="gh-dashboard-img"
+              />
+            </div>
+            <div className="gh-dashboard-card">
+              <img
+                src={`https://github-readme-stats.vercel.app/api/top-langs/?username=${username}&layout=compact&theme=tokyonight&hide_border=true&bg_color=00000000`}
+                alt="Top Languages"
+                className="gh-dashboard-img"
+              />
+            </div>
           </div>
         </div>
         <div className="gh-pinned-section">

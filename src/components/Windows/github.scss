@@ -29,55 +29,34 @@
     }
   }
 
-  // Heatmap UI styling
   .gh-contributions-section {
     margin-bottom: 32px;
 
-    .gh-heatmap-card {
-      border: 1px solid #30363d;
-      border-radius: 6px;
-      padding: 16px 20px;
-      background-color: transparent;
+    .gh-dashboard-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
 
-      .gh-heatmap-img {
-        width: 100%;
-        height: auto;
-        display: block;
-        margin-bottom: 8px;
-      }
-
-      .gh-heatmap-footer {
+      .gh-dashboard-card {
+        background-color: #0d1117;
+        border: 1px solid #30363d;
+        border-radius: 6px;
+        padding: 16px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        font-size: 12px;
-        color: #8b949e;
+        transition: all 0.2s ease;
 
-        .gh-footer-link {
-          cursor: pointer;
-          &:hover {
-            color: #58a6ff;
-          }
+        &:hover {
+          border-color: #8b949e;
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
         }
 
-        .gh-legend {
-          display: flex;
-          align-items: center;
-          gap: 6px;
-
-          .gh-legend-cells {
-            display: flex;
-            gap: 3px;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-
-            li {
-              width: 10px;
-              height: 10px;
-              border-radius: 2px;
-            }
-          }
+        .gh-dashboard-img {
+          width: 100%;
+          height: auto;
+          object-fit: contain;
         }
       }
     }
@@ -228,14 +207,10 @@
 @media (max-width: 768px) {
   .gh-main-container {
     padding: 16px;
+    
+    .gh-dashboard-grid,
     .gh-pinned-grid {
       grid-template-columns: 1fr;
-    }
-    .gh-heatmap-card {
-      overflow-x: auto;
-      .gh-heatmap-img {
-        min-width: 650px;
-      }
     }
   }
 }
