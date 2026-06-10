@@ -116,7 +116,8 @@
 
 @media screen and (max-width: 768px) {
   .dock {
-    width: 90%;
+    width: fit-content;
+    max-width: 95%;
     overflow-x: auto;
     overflow-y: hidden;
     padding: 0.3rem;
