@@ -10,7 +10,6 @@ import Cli from "./components/Windows/Cli";
 import Calendar from "./components/Windows/Calendar";
 import Link from "./components/Windows/Link";
 import Mail from "./components/Windows/Mail";
-import MobileWarning from "./components/MobileWarning";
 
 const App = () => {
   const [windowState, setwindowState] = useState({
@@ -29,7 +28,6 @@ const App = () => {
   return (
     <main>
       <Nav />
-      <MobileWarning />
       <Dock
         windowState={windowState}
         setwindowState={setwindowState}
