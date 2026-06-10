@@ -84,3 +84,18 @@ nav {
     font-feature-settings: "tnum"; 
   }
 }
+
+@media screen and (max-width: 768px) {
+  nav {
+    .left {
+      .nav-item {
+        display: none;
+
+        &.apple-icon,
+        &.app-name {
+          display: flex;
+        }
+      }
+    }
+  }
+}
