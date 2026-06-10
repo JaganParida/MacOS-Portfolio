@@ -13,11 +13,11 @@ import Mail from "./components/Windows/Mail";
 import ContextMenu from "./components/ContextMenu";
 
 const wallpapers = [
-  "https://raw.githubusercontent.com/vinceliuice/WhiteSur-wallpapers/master/4k/Monterey-dark.jpg", // Monterey Dark
-  "https://raw.githubusercontent.com/vinceliuice/WhiteSur-wallpapers/master/4k/BigSur-dark.jpg", // BigSur Dark
-  "https://raw.githubusercontent.com/vinceliuice/WhiteSur-wallpapers/master/4k/Catalina-dark.jpg", // Catalina Dark
-  "https://raw.githubusercontent.com/vinceliuice/WhiteSur-wallpapers/master/4k/Mojave-dark.jpg", // Mojave Dark
-  "https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=2564&auto=format&fit=crop" // Liquid Dark
+  "/monterey.jpg",
+  "/bg1.jpg",
+  "/bg2.jpg",
+  "/bg3.jpg",
+  "/mac-wallpaper.jpg"
 ];
 
 const App = () => {

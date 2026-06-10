@@ -36,7 +36,7 @@ const MacWindow = ({
     setIsClosingWindow(true);
     setTimeout(() => {
       setwindowState((prev) => ({ ...prev, [windowName]: false }));
-    }, 250);
+    }, 300);
   };
 
   const handleMaximize = (e) => {
