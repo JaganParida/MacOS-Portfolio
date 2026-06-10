@@ -5,7 +5,8 @@
     "description": "Welcome to my Portfolio Website, where I showcase my skills, projects, and expertise in web development. This portfolio is built using HTML, CSS, and JavaScript to provide an interactive and user-f...",
     "language": "HTML",
     "stars": 2,
-    "repoLink": "https://github.com/jaganparida/Portfolio"
+    "repoLink": "https://github.com/jaganparida/Portfolio",
+    "liveLink": "https://jaganparida.github.io/Portfolio"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "description": "The Spotify Clone is a web-based music streaming application built using HTML, CSS, and JavaScript. It allows users to search and play their favorite songs, as well as play all songs listed on the ...",
     "language": "HTML",
     "stars": 2,
-    "repoLink": "https://github.com/jaganparida/Spotify_clone"
+    "repoLink": "https://github.com/jaganparida/Spotify_clone",
+    "liveLink": "https://jaganparida.github.io/Spotify_clone"
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "description": "A comprehensive dashboard designed to track daily tasks, manage time efficiently, and visualize productivity trends over time.",
     "language": "CSS",
     "stars": 0,
-    "repoLink": "https://github.com/jaganparida/Productivity-Dashboard"
+    "repoLink": "https://github.com/jaganparida/Productivity-Dashboard",
+    "liveLink": "https://jaganparida.github.io/Productivity-Dashboard"
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "description": "Welcome to WanderLodge, a full-stack web application inspired by Airbnb. This platform allows users to explore, create, review, and manage lodging listings. Built using HTML, CSS, JavaScript, Mongo...",
     "language": "CSS",
     "stars": 1,
-    "repoLink": "https://github.com/jaganparida/WanderLodge"
+    "repoLink": "https://github.com/jaganparida/WanderLodge",
+    "liveLink": "https://jaganparida.github.io/WanderLodge"
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "description": "A smart SGPA & CGPA calculator that reads Excel files, finds results by Reg. No., and provides clean, downloadable reports.",
     "language": "JavaScript",
     "stars": 1,
-    "repoLink": "https://github.com/jaganparida/sgpa_and_cgpa_calculator"
+    "repoLink": "https://github.com/jaganparida/sgpa_and_cgpa_calculator",
+    "liveLink": "https://jaganparida.github.io/sgpa_and_cgpa_calculator"
   },
   {
     "id": 6,
@@ -45,6 +50,7 @@
     "description": "A unique portfolio website designed with a macOS interface style, featuring draggable windows, a functional dock, and system-like applications.",
     "language": "JavaScript",
     "stars": 0,
-    "repoLink": "https://github.com/jaganparida/MacOS-Portfolio"
+    "repoLink": "https://github.com/jaganparida/MacOS-Portfolio",
+    "liveLink": "https://jaganparida.github.io/MacOS-Portfolio"
   }
 ]

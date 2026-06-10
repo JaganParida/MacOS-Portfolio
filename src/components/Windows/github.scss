@@ -98,10 +98,13 @@
     flex-direction: column;
     justify-content: space-between;
     min-height: 120px;
-    transition: border-color 0.2s;
+    transition: all 0.2s ease;
+    cursor: pointer;
 
     &:hover {
       border-color: #8b949e;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     }
 
     .gh-card-header {
@@ -135,10 +138,21 @@
         padding: 0 7px;
         font-size: 12px;
         color: #8b949e;
+        line-height: 18px;
       }
 
-      .gh-drag-icon {
-        fill: #8b949e;
+      .gh-options-icon {
+        cursor: pointer;
+        padding: 4px;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.2s;
+        
+        &:hover {
+          background-color: rgba(139, 148, 158, 0.2);
+        }
       }
     }
 
@@ -187,6 +201,24 @@
 
         .gh-star-icon {
           fill: #8b949e;
+        }
+
+        .gh-live-link {
+          margin-left: auto;
+          
+          a {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: #8b949e;
+            text-decoration: none;
+            transition: color 0.2s;
+
+            &:hover {
+              color: #58a6ff;
+              svg { fill: #58a6ff; }
+            }
+          }
         }
       }
     }

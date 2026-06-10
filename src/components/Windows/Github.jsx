@@ -5,7 +5,10 @@ import "./github.scss";
 
 const GitCard = ({ data }) => {
   return (
-    <div className="gh-card">
+    <div
+      className="gh-card"
+      onClick={() => window.open(data.repoLink, "_blank")}
+    >
       <div className="gh-card-header">
         <div className="gh-title-area">
           <svg
@@ -22,10 +25,16 @@ const GitCard = ({ data }) => {
             target="_blank"
             rel="noreferrer"
             className="gh-repo-name"
+            onClick={(e) => e.stopPropagation()}
           >
             {data.title}
           </a>
           <span className="gh-badge">Public</span>
+        </div>
+        <div className="gh-options-icon">
+          <svg aria-hidden="true" height="16" viewBox="0 0 16 16" width="16" fill="#8b949e">
+            <path d="M8 9a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM8 4a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM8 14a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+          </svg>
         </div>
       </div>
       <p className="gh-description">{data.description}</p>
@@ -35,6 +44,24 @@ const GitCard = ({ data }) => {
             <span className={`gh-language-dot ${data.language}`}></span>
             <span className="gh-language-text">{data.language}</span>
           </div>
+          {data.stars > 0 && (
+            <div className="gh-stat-item">
+              <svg aria-label="star" role="img" height="16" viewBox="0 0 16 16" width="16" fill="#8b949e">
+                <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Zm0 2.445L6.615 5.5a.75.75 0 0 1-.564.41l-3.097.45 2.24 2.184a.75.75 0 0 1 .216.664l-.528 3.084 2.769-1.456a.75.75 0 0 1 .698 0l2.77 1.456-.53-3.084a.75.75 0 0 1 .216-.664l2.24-2.183-3.096-.45a.75.75 0 0 1-.564-.41L8 2.694Z"></path>
+              </svg>
+              <span>{data.stars}</span>
+            </div>
+          )}
+          {data.liveLink && (
+            <div className="gh-stat-item gh-live-link">
+              <a href={data.liveLink} target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>
+                <svg aria-hidden="true" height="16" viewBox="0 0 16 16" width="16" fill="#8b949e">
+                  <path d="M10.604 1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.75.75 0 0 1-1.06-1.06l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1ZM3.75 2A1.75 1.75 0 0 0 2 3.75v8.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0 0 14 12.25v-3.5a.75.75 0 0 0-1.5 0v3.5a.25.25 0 0 1-.25.25h-8.5a.25.25 0 0 1-.25-.25v-8.5a.25.25 0 0 1 .25-.25h3.5a.75.75 0 0 0 0-1.5h-3.5Z"></path>
+                </svg>
+                <span>Live Demo</span>
+              </a>
+            </div>
+          )}
         </div>
       </div>
     </div>
@@ -77,11 +104,10 @@ const Github = ({
           </div>
         </div>
         <div className="gh-pinned-section">
-          <h3
-            style={{ marginBottom: "1rem", color: "#c9d1d9", fontSize: "1rem" }}
-          >
-            Pinned Projects
-          </h3>
+          <div className="gh-section-header">
+            <h3>Pinned</h3>
+            <span className="gh-link-text">Customize your pins</span>
+          </div>
           <div className="gh-pinned-grid">
             {githubData.map((project) => (
               <GitCard key={project.id} data={project} />
