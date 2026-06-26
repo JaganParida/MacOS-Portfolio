@@ -79,7 +79,9 @@ const MacWindow = ({
     
     return {
       x: isNaN(calculatedX) ? 100 : calculatedX,
-      y: 40 // Always position exactly below nav bar (32px nav + 8px gap)
+      y: 40, // Always position exactly below nav bar (32px nav + 8px gap)
+      width: isNaN(w) ? 800 : w,
+      height: isNaN(h) ? 600 : h
     };
   };
 
@@ -91,7 +93,12 @@ const MacWindow = ({
       position={effectiveMaximized ? { x: 0, y: 32 } : undefined}
       disableDragging={effectiveMaximized}
       enableResizing={!effectiveMaximized}
-      default={{ x: initialPos.x, y: initialPos.y, width: width, height: height }}
+      default={{ 
+        x: initialPos.x, 
+        y: initialPos.y, 
+        width: initialPos.width, 
+        height: initialPos.height 
+      }}
       minWidth={300}
       minHeight={200}
       bounds="window"
