@@ -207,3 +207,23 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .bento-main-container.github-contributions-page {
+    padding: 16px;
+    .bento-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .pinned-repo-card {
+      .repo-header .repo-title-row {
+        min-width: 0;
+        .repo-name {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+}
