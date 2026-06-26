@@ -43,24 +43,27 @@ Instead of a traditional static resume, I built a **fully functional web-based o
 
 ### 📂 Application Suite
 
-| Icon | App          | My Implementation                                                                                   |
+| Icon | App          | Description                                                                                         |
 | :--: | :----------- | :-------------------------------------------------------------------------------------------------- |
-|  🧑‍💻  | **Terminal** | A functional CLI that allows users to navigate my skills and bio using commands like `ls` and `cd`. |
-|  🐙  | **GitHub**   | Fetches my live contribution data and pinned repositories using the GitHub API.                     |
-|  🎵  | **Spotify**  | An embedded player connected to my personal "Coding Mode" playlist.                                 |
-|  📧  | **Mail**     | A fully working email client. **Clicking Send actually opens your Gmail** to email me directly!     |
-|  🔗  | **Links**    | A custom "Linktree" style window organizing my social presence.                                     |
-|  📅  | **Calendar** | A custom-built calendar logic to handle date navigation and real-time updates.                      |
+|  🧑‍💻  | **Terminal** | A functional CLI that allows users to navigate the system using commands like `ls` and `cd`.        |
+|  🐙  | **GitHub**   | An interactive, full-window contribution calendar with real-time commit tracking and year filtering.|
+|  📄  | **Resume**   | A dedicated PDF viewer with intuitive scrolling to read the resume directly in the browser.         |
+|  📝  | **Note**     | A simple text editor interface showcasing personal bio and notes.                                   |
+|  🎵  | **Spotify**  | An embedded player connected to a personal "Coding Mode" playlist.                                  |
+|  📧  | **Mail**     | A simulated email client. **Clicking Send actually opens Gmail** to email directly!                 |
+|  🔗  | **Links**    | A custom "Linktree" style window organizing all social presence and important URLs.                 |
+|  📅  | **Calendar** | Custom-built calendar logic to handle date navigation and real-time updates.                        |
 
 ---
 
-## 🛠️ Technical Specifications
+## 🛠️ Tech Stack
 
-- **Core Framework:** `React.js` (v18)
+- **Core Framework:** `React.js` (v19)
 - **Build Tool:** `Vite` (Lightning fast HMR)
-- **Styling:** `SCSS` (Custom modules, no UI libraries used for core layout)
+- **Styling:** `SCSS` (Custom modules, zero bloated UI libraries)
+- **Window Management:** `react-rnd` (Draggable and resizable window physics)
+- **GitHub Integration:** `react-github-calendar`
 - **Icons:** `Lucide React`
-- **Animation:** `Framer Motion`
 - **Deployment:** `Vercel`
 
 ---
