@@ -253,3 +253,22 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .mail-window {
+    flex-direction: column;
+    .mail-sidebar {
+      display: none;
+    }
+    .mail-main {
+      margin: 0;
+      border-radius: 0;
+      .top-bar .search-box {
+        max-width: 100%;
+      }
+      .mail-compose-container .compose-card {
+        padding: 0 1rem;
+      }
+    }
+  }
+}

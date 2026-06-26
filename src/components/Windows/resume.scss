@@ -39,3 +39,12 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .resume-window {
+    padding: 10px;
+    iframe {
+      height: 100vh;
+    }
+  }
+}

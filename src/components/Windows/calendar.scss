@@ -156,3 +156,30 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .calendar-window {
+    flex-direction: column;
+    .cal-sidebar {
+      display: none;
+    }
+    .cal-main {
+      padding: 1rem;
+      header .header-info h1 {
+        font-size: 1.2rem;
+      }
+      header .header-info .year {
+        font-size: 1.2rem;
+      }
+      .days-grid .day {
+        padding: 0.2rem;
+        .day-number {
+          width: 22px;
+          height: 22px;
+          line-height: 22px;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}

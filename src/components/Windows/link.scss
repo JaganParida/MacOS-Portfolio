@@ -93,3 +93,19 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .link-window {
+    padding: 1rem;
+    .profile-header {
+      margin-bottom: 1rem;
+      .avatar {
+        width: 70px;
+        height: 70px;
+      }
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
