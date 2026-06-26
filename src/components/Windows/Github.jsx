@@ -53,6 +53,17 @@ const Github = ({
   const username = "jaganparida";
   const [selectedYear, setSelectedYear] = useState(2026);
   const years = [2026, 2025, 2024];
+  const calendarRef = React.useRef(null);
+
+  React.useEffect(() => {
+    // Small delay to allow the calendar SVG to render before scrolling
+    const timer = setTimeout(() => {
+      if (calendarRef.current) {
+        calendarRef.current.scrollLeft = calendarRef.current.scrollWidth;
+      }
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [selectedYear]);
 
   return (
     <MacWindow
@@ -72,7 +83,7 @@ const Github = ({
         </div>
 
         <div className="contribution-layout">
-          <div className="calendar-container">
+          <div className="calendar-container" ref={calendarRef}>
             <GitHubCalendar 
               username={username}
               year={selectedYear}

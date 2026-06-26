@@ -92,12 +92,12 @@
 .mobile-maximized {
   width: 100% !important;
   height: calc(100vh - 120px) !important;
-  transform: translate(0px, 32px) !important;
+  transform: translate(0px, 35px) !important;
 }
 
 @media screen and (max-width: 768px) {
   .mobile-maximized {
-    height: calc(100vh - 40px) !important;
+    height: calc(100vh - 35px) !important;
   }
 }
 

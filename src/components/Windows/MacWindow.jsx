@@ -44,7 +44,28 @@ const MacWindow = ({
     setIsMaximized(!isMaximized);
   };
 
-  const effectiveMaximized = isMaximized || isMobile;
+  const getDesiredWidth = () => {
+    let w = 800;
+    if (typeof width === 'string') {
+      if (width.includes('calc')) w = window.innerWidth * 0.8;
+      else if (width.includes('vw')) w = (parseFloat(width.replace(/[^\d.-]/g, '')) / 100) * window.innerWidth;
+      else if (width.includes('px')) w = parseFloat(width.replace(/[^\d.-]/g, ''));
+    } else if (typeof width === 'number') {
+      w = width;
+    }
+    return isNaN(w) ? 800 : w;
+  };
+
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  
+  useEffect(() => {
+    const handleResize = () => setScreenWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const desiredWidth = getDesiredWidth();
+  const effectiveMaximized = isMaximized || isMobile || screenWidth <= desiredWidth;
 
   const getInitialPosition = () => {
     let w = 800;
