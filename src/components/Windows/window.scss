@@ -89,6 +89,18 @@
   }
 }
 
+.mobile-maximized {
+  width: 100vw !important;
+  height: calc(100vh - 120px) !important;
+  transform: translate(0px, 32px) !important;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-maximized {
+    height: calc(100vh - 40px) !important;
+  }
+}
+
 @keyframes mac-window-open {
   0% {
     transform: scale(0.3) translateY(100px);
