@@ -65,7 +65,7 @@ const MacWindow = ({
       if (height.includes('calc(100vh - 130px)')) {
         h = window.innerHeight - 130;
       } else if (height.includes('calc')) {
-        h = window.innerHeight * 0.8; // Safe fallback
+        h = window.innerHeight * 0.8; 
       } else if (height.includes('vh')) {
         h = (parseFloat(height.replace(/[^\d.-]/g, '')) / 100) * window.innerHeight;
       } else if (height.includes('px')) {
@@ -75,13 +75,17 @@ const MacWindow = ({
       h = height;
     }
     
+    // Safety caps: NEVER exceed the actual screen dimensions
+    w = Math.min(isNaN(w) ? 800 : w, window.innerWidth);
+    h = Math.min(isNaN(h) ? 600 : h, window.innerHeight - 80); // Leave room for nav & dock
+
     const calculatedX = Math.max(0, (window.innerWidth - w) / 2);
     
     return {
-      x: isNaN(calculatedX) ? 100 : calculatedX,
-      y: 40, // Always position exactly below nav bar (32px nav + 8px gap)
-      width: isNaN(w) ? 800 : w,
-      height: isNaN(h) ? 600 : h
+      x: isNaN(calculatedX) ? 0 : calculatedX,
+      y: 40,
+      width: w,
+      height: h
     };
   };
 
