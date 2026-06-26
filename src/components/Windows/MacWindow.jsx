@@ -6,7 +6,7 @@ import "./window.scss";
 const MacWindow = ({
   children,
   width = "45vw",
-  height = "calc(100vh - 120px)",
+  height = "calc(100vh - 130px)",
   windowName,
   windowState,
   setwindowState,
@@ -48,22 +48,38 @@ const MacWindow = ({
 
   const getInitialPosition = () => {
     let w = 800;
-    if (typeof width === 'string' && width.includes('vw')) {
-      w = (parseFloat(width) / 100) * window.innerWidth;
+    if (typeof width === 'string') {
+      if (width.includes('calc')) {
+        w = window.innerWidth * 0.8; // Safe fallback
+      } else if (width.includes('vw')) {
+        w = (parseFloat(width.replace(/[^\d.-]/g, '')) / 100) * window.innerWidth;
+      } else if (width.includes('px')) {
+        w = parseFloat(width.replace(/[^\d.-]/g, ''));
+      }
     } else if (typeof width === 'number') {
       w = width;
     }
     
     let h = 600;
-    if (typeof height === 'string' && height.includes('vh')) {
-      h = (parseFloat(height) / 100) * window.innerHeight;
+    if (typeof height === 'string') {
+      if (height.includes('calc(100vh - 130px)')) {
+        h = window.innerHeight - 130;
+      } else if (height.includes('calc')) {
+        h = window.innerHeight * 0.8; // Safe fallback
+      } else if (height.includes('vh')) {
+        h = (parseFloat(height.replace(/[^\d.-]/g, '')) / 100) * window.innerHeight;
+      } else if (height.includes('px')) {
+        h = parseFloat(height.replace(/[^\d.-]/g, ''));
+      }
     } else if (typeof height === 'number') {
       h = height;
     }
     
+    const calculatedX = Math.max(0, (window.innerWidth - w) / 2);
+    
     return {
-      x: Math.max(0, (window.innerWidth - w) / 2),
-      y: Math.max(32, (window.innerHeight - h) / 2 - 20)
+      x: isNaN(calculatedX) ? 100 : calculatedX,
+      y: 40 // Always position exactly below nav bar (32px nav + 8px gap)
     };
   };
 
