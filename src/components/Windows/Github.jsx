@@ -1,45 +1,42 @@
 import React, { useState } from "react";
 import MacWindow from "./MacWindow";
 import { GitHubCalendar } from "react-github-calendar";
-import { FolderGit2, Star, ExternalLink } from "lucide-react";
+import { Book, Star, GitFork, GripHorizontal } from "lucide-react";
 import githubData from "../../assets/github.json";
 import "./github.scss";
 
-const BentoProjectCard = ({ data }) => {
+const PinnedRepoCard = ({ data }) => {
   return (
     <div
-      className="bento-card project-card"
+      className="pinned-repo-card"
       onClick={() => window.open(data.repoLink, "_blank")}
     >
-      <div className="card-bg-gradient"></div>
-      <div className="card-content">
-        <div className="card-header">
-          <div className="icon-wrapper">
-            <FolderGit2 size={20} className="project-icon" />
-          </div>
-          {data.liveLink && (
-            <a 
-              href={data.liveLink} 
-              target="_blank" 
-              rel="noreferrer" 
-              onClick={(e) => e.stopPropagation()}
-              className="live-link-btn"
-            >
-              Live Demo <ExternalLink size={14} />
-            </a>
-          )}
+      <div className="repo-header">
+        <div className="repo-title-row">
+          <Book size={16} className="repo-icon" />
+          <a href={data.repoLink} className="repo-name" target="_blank" rel="noreferrer" onClick={(e) => e.stopPropagation()}>{data.title}</a>
+          <span className="public-badge">Public</span>
         </div>
-        <h3 className="project-title">{data.title}</h3>
-        <p className="project-desc">{data.description}</p>
-        <div className="project-footer">
-          <span className={`lang-badge ${data.language}`}>
-            <span className="dot"></span> {data.language}
-          </span>
-          {data.stars > 0 && (
-            <span className="star-badge">
-              <Star size={14} /> {data.stars}
-            </span>
-          )}
+        <GripHorizontal size={16} className="drag-icon" />
+      </div>
+      
+      <p className="repo-desc">{data.description}</p>
+      
+      <div className="repo-footer">
+        <div className="lang-info">
+          <span className={`lang-dot ${data.language}`}></span>
+          <span className="lang-name">{data.language}</span>
+        </div>
+        
+        {data.stars > 0 && (
+          <div className="repo-stat">
+            <Star size={14} className="stat-icon" /> {data.stars}
+          </div>
+        )}
+        
+        {/* Using a mock fork count of 1 since data has none, like the screenshot shows forks */}
+        <div className="repo-stat">
+          <GitFork size={14} className="stat-icon" /> 1
         </div>
       </div>
     </div>
@@ -65,7 +62,6 @@ const Github = ({
       activeWindow={activeWindow}
       setActiveWindow={setActiveWindow}
       width="80vw"
-      height="calc(100vh - 120px)"
     >
       <div className="bento-main-container github-contributions-page">
         
@@ -115,7 +111,7 @@ const Github = ({
 
         <div className="bento-grid">
           {githubData.map((project) => (
-            <BentoProjectCard key={project.id} data={project} />
+            <PinnedRepoCard key={project.id} data={project} />
           ))}
         </div>
 

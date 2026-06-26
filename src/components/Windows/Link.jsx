@@ -53,7 +53,6 @@ const Link = ({
       activeWindow={activeWindow}
       setActiveWindow={setActiveWindow}
       width="400px"
-      height="600px"
     >
       <div className="link-window">
         <div className="profile-header">

@@ -17,7 +17,6 @@ const Resume = ({
       activeWindow={activeWindow}
       setActiveWindow={setActiveWindow}
       width="50vw"
-      height="70vh"
     >
       <div className="resume-window">
         <iframe

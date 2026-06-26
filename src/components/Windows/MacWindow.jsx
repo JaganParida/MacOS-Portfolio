@@ -6,7 +6,7 @@ import "./window.scss";
 const MacWindow = ({
   children,
   width = "45vw",
-  height = "53vh",
+  height = "calc(100vh - 120px)",
   windowName,
   windowState,
   setwindowState,

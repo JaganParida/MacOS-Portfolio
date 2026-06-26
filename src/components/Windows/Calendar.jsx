@@ -84,7 +84,6 @@ const Calendar = ({
       activeWindow={activeWindow}
       setActiveWindow={setActiveWindow}
       width="60vw"
-      height="70vh"
     >
       <div className="calendar-window">
         {/* Sidebar */}

@@ -17,14 +17,13 @@ const Spotify = ({
       activeWindow={activeWindow}
       setActiveWindow={setActiveWindow}
       width="350px"
-      height="400px"
     >
       <div className="spotify-window">
         <iframe
           data-testid="embed-iframe"
           src="https://open.spotify.com/embed/playlist/1YTPE2Ek3xVXF0yML8svLA?utm_source=generator&theme=0"
           width="100%"
-          height="352"
+          height="100%"
           frameBorder="0"
           allowfullscreen=""
           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"

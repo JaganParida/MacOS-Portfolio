@@ -54,7 +54,6 @@ const Mail = ({
       activeWindow={activeWindow}
       setActiveWindow={setActiveWindow}
       width="700px"
-      height="550px"
     >
       <div className="mail-window">
         {/* Sidebar - Gmail Style */}
