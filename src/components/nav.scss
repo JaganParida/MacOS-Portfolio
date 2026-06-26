@@ -89,6 +89,8 @@ nav {
 
 @media screen and (max-width: 768px) {
   nav {
+    padding-inline: 0.5rem;
+
     .left {
       .nav-item {
         display: none;
@@ -97,6 +99,29 @@ nav {
         &.app-name {
           display: flex;
         }
+      }
+      .apple-icon {
+        padding-inline: 0.4rem;
+      }
+      .app-name {
+        padding: 0.15rem 0.4rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    .right {
+      gap: 0;
+      .nav-icon {
+        padding: 0.2rem;
+        &:nth-child(3),
+        &:nth-child(4) {
+          display: none;
+        }
+      }
+      .date-time {
+        margin-left: 0.2rem;
+        padding: 0.15rem 0.4rem;
+        font-size: 0.75rem;
       }
     }
   }
