@@ -104,8 +104,8 @@ const Github = ({
         </div>
 
         {/* Pinned Projects Section */}
-        <div className="bento-header" style={{ marginTop: '48px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <h2 style={{ fontSize: '20px' }}>Pinned</h2>
+        <div className="bento-header" style={{ marginTop: '48px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
+          <h2 style={{ fontSize: '20px', margin: 0 }}>Pinned</h2>
           <a href={`https://github.com/${username}`} target="_blank" rel="noreferrer" style={{ color: '#58a6ff', fontSize: '14px', textDecoration: 'none' }}>Customize your pins</a>
         </div>
 
