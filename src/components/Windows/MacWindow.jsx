@@ -115,7 +115,7 @@ const MacWindow = ({
   return (
     <Rnd
       className={effectiveMaximized ? "mobile-maximized" : ""}
-      size={effectiveMaximized ? { width: "100%", height: isMobile ? "calc(100vh - 105px)" : "calc(100vh - 120px)" } : undefined}
+      size={effectiveMaximized ? { width: "100%", height: isMobile ? "calc(100dvh - 115px)" : "calc(100vh - 120px)" } : undefined}
       position={effectiveMaximized ? { x: 0, y: 35 } : undefined}
       disableDragging={effectiveMaximized}
       enableResizing={!effectiveMaximized}

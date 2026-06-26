@@ -99,7 +99,8 @@
 
 @media screen and (max-width: 768px) {
   .mobile-maximized {
-    height: calc(100vh - 105px) !important;
+    height: calc(100vh - 115px) !important;
+    height: calc(100dvh - 115px) !important;
   }
 }
 
