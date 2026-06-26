@@ -56,13 +56,34 @@ const Github = ({
   const calendarRef = React.useRef(null);
 
   React.useEffect(() => {
-    // Small delay to allow the calendar SVG to render before scrolling
-    const timer = setTimeout(() => {
-      if (calendarRef.current) {
-        calendarRef.current.scrollLeft = calendarRef.current.scrollWidth;
+    const el = calendarRef.current;
+    if (!el) return;
+
+    const scrollToRight = () => {
+      if (el.scrollWidth > el.clientWidth) {
+        el.scrollLeft = el.scrollWidth;
       }
-    }, 100);
-    return () => clearTimeout(timer);
+    };
+
+    // Try immediately
+    scrollToRight();
+
+    // Observe changes inside the calendar container (e.g. when SVG is loaded/rendered)
+    const observer = new MutationObserver(() => {
+      scrollToRight();
+    });
+
+    observer.observe(el, { childList: true, subtree: true });
+
+    // Fallback timeouts for safety to handle any delay in render/layout calculations
+    const timeouts = [100, 300, 500, 1000, 2000, 4000].map(delay =>
+      setTimeout(scrollToRight, delay)
+    );
+
+    return () => {
+      observer.disconnect();
+      timeouts.forEach(clearTimeout);
+    };
   }, [selectedYear]);
 
   return (

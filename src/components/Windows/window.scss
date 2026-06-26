@@ -93,11 +93,13 @@
   width: 100% !important;
   height: calc(100vh - 120px) !important;
   transform: translate(0px, 35px) !important;
+  left: 0 !important;
+  top: 0 !important;
 }
 
 @media screen and (max-width: 768px) {
   .mobile-maximized {
-    height: calc(100vh - 35px) !important;
+    height: calc(100vh - 105px) !important;
   }
 }
 
