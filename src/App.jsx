@@ -49,10 +49,16 @@ const App = () => {
   };
 
   return (
-    <main 
-      onContextMenu={handleContextMenu}
-      style={{ backgroundImage: `url(${wallpapers[wallpaperIndex]})` }}
-    >
+    <main onContextMenu={handleContextMenu}>
+      <div className="wallpaper-container">
+        {wallpapers.map((url, idx) => (
+          <div
+            key={url}
+            className={`wallpaper-layer ${idx === wallpaperIndex ? "active" : ""}`}
+            style={{ backgroundImage: `url(${url})` }}
+          />
+        ))}
+      </div>
       <ContextMenu 
         show={contextMenu.show} 
         x={contextMenu.x} 

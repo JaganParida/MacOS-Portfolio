@@ -16,12 +16,36 @@ main {
   height: 100%;
   width: 100%;
   overflow: hidden;
-
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   position: relative;
-  transition: background-image 0.5s ease-in-out;
+}
+
+.wallpaper-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  overflow: hidden;
+  pointer-events: none;
+
+  .wallpaper-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: opacity;
+
+    &.active {
+      opacity: 1;
+    }
+  }
 }
 
 body {
