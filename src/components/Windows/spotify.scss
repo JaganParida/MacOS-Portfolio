@@ -386,7 +386,7 @@
     }
     .spotify-main .tracks-list .tracks-header,
     .spotify-main .tracks-list .track-row {
-      grid-template-columns: 20px 1fr 40px;
+      grid-template-columns: 20px minmax(0, 1fr) 40px;
       padding: 8px 4px;
       gap: 8px;
     }
