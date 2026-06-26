@@ -46,13 +46,36 @@ const MacWindow = ({
 
   const effectiveMaximized = isMaximized || isMobile;
 
+  const getInitialPosition = () => {
+    let w = 800;
+    if (typeof width === 'string' && width.includes('vw')) {
+      w = (parseFloat(width) / 100) * window.innerWidth;
+    } else if (typeof width === 'number') {
+      w = width;
+    }
+    
+    let h = 600;
+    if (typeof height === 'string' && height.includes('vh')) {
+      h = (parseFloat(height) / 100) * window.innerHeight;
+    } else if (typeof height === 'number') {
+      h = height;
+    }
+    
+    return {
+      x: Math.max(0, (window.innerWidth - w) / 2),
+      y: Math.max(32, (window.innerHeight - h) / 2 - 20)
+    };
+  };
+
+  const initialPos = getInitialPosition();
+
   return (
     <Rnd
       size={effectiveMaximized ? { width: "100vw", height: isMobile ? "calc(100vh - 40px)" : "calc(100vh - 120px)" } : undefined}
       position={effectiveMaximized ? { x: 0, y: 32 } : undefined}
       disableDragging={effectiveMaximized}
       enableResizing={!effectiveMaximized}
-      default={{ x: 300, y: 100, width: width, height: height }}
+      default={{ x: initialPos.x, y: initialPos.y, width: width, height: height }}
       minWidth={300}
       minHeight={200}
       bounds="window"
